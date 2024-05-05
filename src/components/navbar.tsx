@@ -73,19 +73,16 @@ export function Navbar() {
           variant="h6"
           color={isScrolling ? "gray" : "white"}
         >
-          Material Tailwind
+          HIER LOGO EINFÜGEN
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem>Home</NavItem>
-          <NavItem>About Us</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-            Docs
-          </NavItem>
+          <NavItem>Kurse</NavItem>
+          <NavItem>Kursort</NavItem>
+          <NavItem>Kosten</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
           <IconButton
@@ -110,8 +107,8 @@ export function Navbar() {
             <i className="fa-brands fa-instagram text-base" />
           </IconButton>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"} size="sm">
-              Blocks
+            <Button color={isScrolling ? "pink" : "white"} size="sm">
+              Kontakt
             </Button>
           </a>
         </div>
