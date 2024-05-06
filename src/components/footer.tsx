@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import TypographyComponent from "@/components/shared/Typography";
-import ButtonComponent, { IconButtonComponent } from "@/components/shared/ButtonComponent";
+import ButtonComponent, {
+  IconButtonComponent,
+} from "@/components/shared/ButtonComponent";
 
 const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
 const CURRENT_YEAR = new Date().getFullYear();
@@ -20,10 +22,10 @@ export function Footer() {
               color="white"
               className="mb-4"
             >
-              Material Tailwind
+              Marcellas Babymassage
             </TypographyComponent>
             <TypographyComponent color="white" className="mb-12 font-normal">
-              The reward for getting on the stage is fame.
+              Sinnliche Momente mit deinem Baby und dir.
             </TypographyComponent>
             <ul className="flex flex-wrap items-center justify-center md:justify-start">
               {LINKS.map((link, idx) => (
@@ -81,13 +83,9 @@ export function Footer() {
             color="white"
             className="text-center font-normal opacity-75"
           >
-            &copy; {CURRENT_YEAR} Made with{" "}
-            <a href="https://www.material-tailwind.com" target="_blank">
-              Material Tailwind
-            </a>{" "}
-            by{" "}
-            <a href="https://www.creative-tim.com" target="_blank">
-              Creative Tim
+            &copy; {CURRENT_YEAR} Made with ❤️ by{" "}
+            <a href="https://www.ansgar-sachs.de" target="_blank">
+              Ansgar
             </a>
             .
           </TypographyComponent>

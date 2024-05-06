@@ -104,7 +104,7 @@ export function Navbar() {
             <i className="fa-brands fa-instagram text-base" />
           </IconButtonComponent>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <ButtonComponent color={isScrolling ? "pink" : "white"} size="sm">
+            <ButtonComponent color={isScrolling ? "amber" : "white"} size="sm">
               Kontakt
             </ButtonComponent>
           </a>
