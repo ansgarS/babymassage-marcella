@@ -1,0 +1,52 @@
+name: Continuous Deployment
+concurrency: continuous-deployment
+
+on:
+    push:
+        branches:
+            - main
+env:
+    ENV: main
+    APP_BRANCH: main
+    BASEPATH: ''
+    APP_URL: https://zwergenstube-lahnstein.de
+    ASSETS_PREFIX: https://zwergenstube-lahnstein.de
+    AWS_REGION: ${{ secrets.AWS_REGION }}
+    # DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+    DEPLOY_ENV: prod
+    S3_BUCKET: zwergenstube-lahnstein.de
+    AWS_ACCOUNT: 032419643434
+
+jobs:
+    deploy:
+        name: Deploy to Production
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: '18.17.1'
+                  cache: 'yarn'
+                  registry-url: 'https://npm.pkg.github.com'
+            - name: Configure AWS Credentials
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_KEY }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+                  aws-region: ${{ secrets.AWS_REGION }}
+            - name: Install app dependencies
+              run: yarn install --frozen-lockfile
+            - name: Build app
+              run: yarn next build
+            - name: Export app
+              run: yarn next export
+            - name: Deploy Infrastructure
+              run: yarn cdk deploy --all --require-approval never
+            - name: Deploy app
+              run: aws s3 sync out "s3://$S3_BUCKET" --delete
+            # - name: Invalidate Cloudfront
+            #   uses: nick-fields/retry@v2.8.1
+            #   with:
+            #     timeout_seconds: 15
+            #     max_attempts: 3
+            #     command: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"
