@@ -1,12 +1,9 @@
 import React from "react";
-import {
-  Navbar as MTNavbar,
-  Collapse,
-  IconButton,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import { Collapse } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import TypographyComponent from "@/shared/Typography";
+import NavbarComponent from "@/shared/Navbar";
+import ButtonComponent, { IconButtonComponent } from "@/shared/ButtonComponent";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -15,7 +12,7 @@ interface NavItemProps {
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
-      <Typography
+      <TypographyComponent
         as="a"
         href={href || "#"}
         target={href ? "_blank" : "_self"}
@@ -23,7 +20,7 @@ function NavItem({ children, href }: NavItemProps) {
         className="font-medium"
       >
         {children}
-      </Typography>
+      </TypographyComponent>
     </li>
   );
 }
@@ -58,7 +55,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <MTNavbar
+    <NavbarComponent
       fullWidth
       shadow={false}
       blurred={false}
@@ -66,7 +63,7 @@ export function Navbar() {
       className="fixed top-0 z-50 border-0"
     >
       <div className="container mx-auto flex items-center justify-between">
-        <Typography
+        <TypographyComponent
           as="a"
           href="https://www.material-tailwind.com"
           target="_blank"
@@ -74,7 +71,7 @@ export function Navbar() {
           color={isScrolling ? "gray" : "white"}
         >
           HIER LOGO EINFÜGEN
-        </Typography>
+        </TypographyComponent>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
             isScrolling ? "text-gray-900" : "text-white"
@@ -85,34 +82,34 @@ export function Navbar() {
           <NavItem>Kosten</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
-          <IconButton
+          <IconButtonComponent
             variant="text"
             color={isScrolling ? "gray" : "white"}
             size="sm"
           >
             <i className="fa-brands fa-twitter text-base" />
-          </IconButton>
-          <IconButton
+          </IconButtonComponent>
+          <IconButtonComponent
             variant="text"
             color={isScrolling ? "gray" : "white"}
             size="sm"
           >
             <i className="fa-brands fa-facebook text-base" />
-          </IconButton>
-          <IconButton
+          </IconButtonComponent>
+          <IconButtonComponent
             variant="text"
             color={isScrolling ? "gray" : "white"}
             size="sm"
           >
             <i className="fa-brands fa-instagram text-base" />
-          </IconButton>
+          </IconButtonComponent>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "pink" : "white"} size="sm">
+            <ButtonComponent color={isScrolling ? "pink" : "white"} size="sm">
               Kontakt
-            </Button>
+            </ButtonComponent>
           </a>
         </div>
-        <IconButton
+        <IconButtonComponent
           variant="text"
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
@@ -123,7 +120,7 @@ export function Navbar() {
           ) : (
             <Bars3Icon strokeWidth={2} className="h-6 w-6" />
           )}
-        </IconButton>
+        </IconButtonComponent>
       </div>
       <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
@@ -136,24 +133,24 @@ export function Navbar() {
             </NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButtonComponent variant="text" color="gray" size="sm">
               <i className="fa-brands fa-twitter text-base" />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            </IconButtonComponent>
+            <IconButtonComponent variant="text" color="gray" size="sm">
               <i className="fa-brands fa-facebook text-base" />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            </IconButtonComponent>
+            <IconButtonComponent variant="text" color="gray" size="sm">
               <i className="fa-brands fa-instagram text-base" />
-            </IconButton>
+            </IconButtonComponent>
             <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray" size="sm" className="ml-auto">
+              <ButtonComponent color="gray" size="sm" className="ml-auto">
                 Blocks
-              </Button>
+              </ButtonComponent>
             </a>
           </div>
         </div>
       </Collapse>
-    </MTNavbar>
+    </NavbarComponent>
   );
 }
 

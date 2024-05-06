@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Typography, Card } from "@material-tailwind/react";
+import TypographyComponent from "@/shared/Typography";
+import CardComponent from "@/shared/Card";
 
 const FAQS = [
   {
@@ -35,31 +36,31 @@ export function Faqs() {
     <section className="px-8 py-20">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
-          <Typography variant="h1" color="blue-gray" className="mb-4">
+          <TypographyComponent variant="h1" color="blue-gray" className="mb-4">
             Frequently asked questions
-          </Typography>
-          <Typography
+          </TypographyComponent>
+          <TypographyComponent
             variant="lead"
             className="mx-auto mb-24 !text-gray-500 lg:w-3/5"
           >
             A lot of people don&apos;t appreciate the moment until it&apos;s
             passed. I&apos;m not trying my hardest, and I&apos;m not trying to
             do
-          </Typography>
+          </TypographyComponent>
         </div>
 
         <div className="grid gap-20 md:grid-cols-1 lg:grid-cols-3">
           {FAQS.map(({ title, desc }) => (
-            <Card key={title} shadow={false} color="transparent">
-              <Typography color="blue-gray" className="pb-6" variant="h4">
+            <CardComponent key={title} shadow={false} color="transparent">
+              <TypographyComponent color="blue-gray" className="pb-6" variant="h4">
                 {title}
-              </Typography>
+              </TypographyComponent>
               <div className="pt-2">
-                <Typography className="font-normal !text-gray-500">
+                <TypographyComponent className="font-normal !text-gray-500">
                   {desc}
-                </Typography>
+                </TypographyComponent>
               </div>
-            </Card>
+            </CardComponent>
           ))}
         </div>
       </div>

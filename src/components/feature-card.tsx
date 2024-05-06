@@ -1,8 +1,5 @@
-import {
-    Typography,
-    Card,
-    CardBody,
-  } from "@material-tailwind/react";
+import CardComponent, { CardBodyComponent } from "@/shared/Card";
+import TypographyComponent from "@/shared/Typography";
   
   
   interface FeatureCardProps {
@@ -13,19 +10,19 @@ import {
   
   export function FeatureCard({ icon: Icon, title, children }: FeatureCardProps) {
     return (
-      <Card color="transparent" shadow={false}>
-        <CardBody className="grid justify-start">
+      <CardComponent color="transparent" shadow={false}>
+        <CardBodyComponent className="grid justify-start">
           <div className="mb-4 grid h-12 w-12 place-content-center rounded-lg bg-gray-900 p-2.5 text-left text-white">
             <Icon className="h-6 w-6" />
           </div>
-          <Typography variant="h5" color="blue-gray" className="mb-2">
+          <TypographyComponent variant="h5" color="blue-gray" className="mb-2">
             {title}
-          </Typography>
-          <Typography className=" font-normal !text-gray-500">
+          </TypographyComponent>
+          <TypographyComponent className=" font-normal !text-gray-500">
             {children}
-          </Typography>
-        </CardBody>
-      </Card>
+          </TypographyComponent>
+        </CardBodyComponent>
+      </CardComponent>
     );
   }
 

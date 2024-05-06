@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Typography, Card, CardBody } from "@material-tailwind/react";
+import CardComponent, { CardBodyComponent } from "@/shared/Card";
+import TypographyComponent from "@/shared/Typography";
 
 interface InfoCardProps {
   title: string;
@@ -10,14 +11,14 @@ interface InfoCardProps {
 
 export function InfoCard({ title, children }: InfoCardProps) {
   return (
-    <Card color="transparent" shadow={false}>
-      <CardBody className="grid px-0">
-        <Typography variant="h2" color="blue-gray" className="mb-2">
+    <CardComponent color="transparent" shadow={false}>
+      <CardBodyComponent className="grid px-0">
+        <TypographyComponent variant="h2" color="blue-gray" className="mb-2">
           {title}
-        </Typography>
-        <Typography className=" font-normal">{children}</Typography>
-      </CardBody>
-    </Card>
+        </TypographyComponent>
+        <TypographyComponent className=" font-normal">{children}</TypographyComponent>
+      </CardBodyComponent>
+    </CardComponent>
   );
 }
 

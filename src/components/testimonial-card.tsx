@@ -1,5 +1,7 @@
 import React from "react";
-import { Typography, Card, CardBody, Avatar } from "@material-tailwind/react";
+import CardComponent, { CardBodyComponent } from "@/shared/Card";
+import AvatarComponent from "@/shared/Avatar";
+import TypographyComponent from "@/shared/Typography";
 
 interface TestimonialCardProps {
   img: string;
@@ -15,23 +17,23 @@ export function TestimonialCard({
   title,
 }: TestimonialCardProps) {
   return (
-    <Card shadow={false} className="items-center text-center">
-      <CardBody>
-        <Avatar src={img} className="mb-3" alt={client} size="lg" />
-        <Typography variant="h6" color="blue-gray">
+    <CardComponent shadow={false} className="items-center text-center">
+      <CardBodyComponent>
+        <AvatarComponent src={img} className="mb-3" alt={client} size="lg" />
+        <TypographyComponent variant="h6" color="blue-gray">
           {client}
-        </Typography>
-        <Typography variant="small" className="mb-3 font-medium !text-gray-700">
+        </TypographyComponent>
+        <TypographyComponent variant="small" className="mb-3 font-medium !text-gray-700">
           {title}
-        </Typography>
-        <Typography
+        </TypographyComponent>
+        <TypographyComponent
           variant="paragraph"
           className="mb-5 font-normal !text-gray-500"
         >
           &quot;{feedback}&quot;
-        </Typography>
-      </CardBody>
-    </Card>
+        </TypographyComponent>
+      </CardBodyComponent>
+    </CardComponent>
   );
 }
 

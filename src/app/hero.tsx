@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Button, Typography } from "@material-tailwind/react";
+import TypographyComponent from "@/shared/Typography";
+import ButtonComponent from "@/shared/ButtonComponent";
 
 
 function Hero() {
@@ -10,21 +11,21 @@ function Hero() {
       <header className="grid !min-h-[49rem] bg-pink-400 px-8">
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
-            <Typography variant="h1" color="white" className="mb-4">
+            <TypographyComponent variant="h1" color="white" className="mb-4">
               Marcellas <br /> Babymassage
-            </Typography>
-            <Typography
+            </TypographyComponent>
+            <TypographyComponent
               variant="lead"
               className="mb-7 !text-white md:pr-16 xl:pr-28"
             >
               Hier eine Kurzbeschreibung deiner Dienstleistungen.
               Ein zweiter Satz passt auch noch hin.
-            </Typography>
-            <Typography className="mb-4" color="white" variant="h6">
+            </TypographyComponent>
+            <TypographyComponent className="mb-4" color="white" variant="h6">
               Mit wenigen Klicks buchen
-            </Typography>
+            </TypographyComponent>
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Button
+              <ButtonComponent
                 size="lg"
                 color="white"
                 className="flex justify-center items-center gap-3"
@@ -37,8 +38,8 @@ function Hero() {
                   className="w-6 h-6"
                 />
                 Zur Kursbuchung
-              </Button>
-              <Button
+              </ButtonComponent>
+              <ButtonComponent
                 size="lg"
                 color="white"
                 className="flex justify-center items-center gap-3"
@@ -51,7 +52,7 @@ function Hero() {
                   className="w-6 h-6"
                 />
                 Kontakt
-              </Button>
+              </ButtonComponent>
             </div>
           </div>
           <Image
@@ -65,17 +66,17 @@ function Hero() {
       </header>
       <div className="mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md">
         <div>
-          <Typography variant="h3" color="blue-gray" className="mb-3">
+          <TypographyComponent variant="h3" color="blue-gray" className="mb-3">
             Kurs Essentials
-          </Typography>
-          <Typography
+          </TypographyComponent>
+          <TypographyComponent
             variant="paragraph"
             className="font-normal !text-gray-500 lg:w-5/12"
           >
             Hier ein Text zu den Kursen. Hier ein Text zu den Kursen. Hier ein
             Text zu den Kursen. Hier ein Text zu den Kursen. Hier ein Text zu den
             Kursen. 
-          </Typography>
+          </TypographyComponent>
         </div>
       </div>
     </div>
