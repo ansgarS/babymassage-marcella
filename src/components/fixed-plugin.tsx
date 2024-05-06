@@ -1,5 +1,5 @@
 "use client";
-import ButtonComponent from "@/shared/ButtonComponent";
+import ButtonComponent from "@/components/shared/ButtonComponent";
 
 export function FixedPlugin() {
   return (

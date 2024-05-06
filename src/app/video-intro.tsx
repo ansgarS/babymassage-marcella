@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { PlayIcon } from "@heroicons/react/24/outline";
-import { IconButtonComponent } from "@/shared/ButtonComponent";
+import { IconButtonComponent } from "@/components/shared/ButtonComponent";
 
 
 export function VideoIntro() {

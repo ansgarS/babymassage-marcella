@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import InfoCard from "@/components/info-card";
-import TypographyComponent from "@/shared/Typography";
+import TypographyComponent from "@/components/shared/Typography";
 
 const OPTIONS = [
   {

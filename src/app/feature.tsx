@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Typography } from "@material-tailwind/react";
 
 import {
   CursorArrowRaysIcon,
@@ -11,7 +10,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 import FeatureCard from "../components/feature-card";
-import TypographyComponent from "@/shared/Typography";
+import TypographyComponent from "@/components/shared/Typography";
 
 const FEATURES = [
   {

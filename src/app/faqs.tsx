@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import TypographyComponent from "@/shared/Typography";
-import CardComponent from "@/shared/Card";
+import TypographyComponent from "@/components/shared/Typography";
+import CardComponent from "@/components/shared/Card";
 
 const FAQS = [
   {

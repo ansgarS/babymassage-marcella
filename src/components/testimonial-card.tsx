@@ -1,7 +1,7 @@
 import React from "react";
-import CardComponent, { CardBodyComponent } from "@/shared/Card";
-import AvatarComponent from "@/shared/Avatar";
-import TypographyComponent from "@/shared/Typography";
+import CardComponent, { CardBodyComponent } from "@/components/shared/Card";
+import AvatarComponent from "@/components/shared/Avatar";
+import TypographyComponent from "@/components/shared/Typography";
 
 interface TestimonialCardProps {
   img: string;

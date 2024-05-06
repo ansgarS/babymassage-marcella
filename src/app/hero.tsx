@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import TypographyComponent from "@/shared/Typography";
-import ButtonComponent from "@/shared/ButtonComponent";
+import TypographyComponent from "@/components/shared/Typography";
+import ButtonComponent from "@/components/shared/ButtonComponent";
 
 
 function Hero() {

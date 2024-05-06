@@ -1,9 +1,9 @@
 import React from "react";
 import { Collapse } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import TypographyComponent from "@/shared/Typography";
-import NavbarComponent from "@/shared/Navbar";
-import ButtonComponent, { IconButtonComponent } from "@/shared/ButtonComponent";
+import TypographyComponent from "@/components/shared/Typography";
+import NavbarComponent from "@/components/shared/Navbar";
+import ButtonComponent, { IconButtonComponent } from "@/components/shared/ButtonComponent";
 
 interface NavItemProps {
   children: React.ReactNode;

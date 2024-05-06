@@ -4,7 +4,7 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 import { UserIcon } from "@heroicons/react/24/solid";
 import TestimonialCard from "../components/testimonial-card";
-import TypographyComponent from "@/shared/Typography";
+import TypographyComponent from "@/components/shared/Typography";
 
 
 const TESTIMONIALS = [

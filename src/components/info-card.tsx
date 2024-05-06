@@ -1,7 +1,7 @@
 import React from "react";
 
-import CardComponent, { CardBodyComponent } from "@/shared/Card";
-import TypographyComponent from "@/shared/Typography";
+import CardComponent, { CardBodyComponent } from "@/components/shared/Card";
+import TypographyComponent from "@/components/shared/Typography";
 
 interface InfoCardProps {
   title: string;
