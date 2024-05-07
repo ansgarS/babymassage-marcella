@@ -144,9 +144,7 @@ export class AppStack extends Stack {
 
   //   const authorizer = new RecaptchaAuthorizer(this, 'reCaptchaAuthorizer', {
   //     allowedActions: ['form_submit'],
-  //     reCaptchaSecretKey: SecretKey.fromPlainText(
-  //       '6LcfJPYkAAAAAJrXqHVsSoTjnRy45g6W9qCdh7Um'
-  //     ),
+  //     reCaptchaSecretKey: TODO
   //   });
 
   //   const handler = new lambda.Function(this, 'WidgetHandler', {
