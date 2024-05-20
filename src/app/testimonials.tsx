@@ -10,23 +10,23 @@ import TypographyComponent from "@/components/shared/Typography";
 const TESTIMONIALS = [
   {
     feedback:
-      "It has been a game-changer for my business. Their dedication, expertise, and attention to detail have truly set them apart. I highly recommend their services!",
-    client: "Jessica Devis",
-    title: "CEO @ MARKETING DIGITAL LTD.",
-    img: "/image/avatar1.jpg",
-  },
-  {
-    feedback:
-      "It understood my unique needs and delivered a tailored solution promptly. Their customer support is top-notch, and I appreciate their commitment.",
-    client: "Mary Joshiash",
-    title: "MARKETING @ APPLE INC.",
+      "Die Kurse waren sehr hilfreich und haben mir geholfen, mich sicherer zu fühlen. Ich kann die Kurse nur weiterempfehlen.",
+    client: "Ansgar S.",
+    title: "Vater von einem zweijähren Sohn",
     img: "/image/avatar2.jpg",
   },
   {
     feedback:
-      "They not only met but exceeded our expectations. Their innovative approach and technical proficiency have been instrumental in our success.",
-    client: "Marcell Glock",
-    title: "CFO @ APPLE INC..",
+    "Ich habe mich sehr wohl gefühlt und konnte viele neue Dinge lernen. Ich kann die Kurse nur weiterempfehlen.",
+    client: "Lisa R.",
+    title: "Mutter eines 6 Monate alten Babies.",
+    img: "/image/avatar1.jpg",
+  },
+  {
+    feedback:
+      "Die Kurse waren sehr hilfreich und haben mir geholfen, mich sicherer zu fühlen. Ich kann die Kurse nur weiterempfehlen.",
+    client: "Ava D.",
+    title: "Zweifache Mutter",
     img: "/image/avatar3.jpg",
   },
 ];
@@ -40,15 +40,14 @@ export function Testimonials() {
             <UserIcon className="h-6 w-6" />
           </div>
           <TypographyComponent variant="h2" color="blue-gray" className="mb-2">
-            What Clients Say
+            Was unsere bisherigen Gruppen sagen
           </TypographyComponent>
           <TypographyComponent
             variant="lead"
             className="mb-10 max-w-3xl text-center !text-gray-600"
           >
-            Discover what our valued clients have to say about their experiences
-            with our services. We take pride in delivering exceptional results
-            and fostering lasting partnerships.
+            Wer will schon einfach einen Kurs buchen, ohne zu wissen, was ihn erwartet? <br/>
+            Lass dich von anderen inspieren, die bereits an unseren Kursen teilgenommen haben.
           </TypographyComponent>
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20">

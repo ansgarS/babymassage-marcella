@@ -6,28 +6,24 @@ import CardComponent from "@/components/shared/Card";
 
 const FAQS = [
   {
-    title: "How do I get started?",
-    desc: "Getting started is easy! Simply [Provide a brief overview of the initial steps or link to a detailed guide].",
+    title: "Wie alt sollte mein Kind mindestens sein?",
+    desc: "Unsere Kurse richten sich grundsätzlich an Kinder ab einem Alter von 4 Monaten. Je nach Kurs variiert das Mindestalter jedoch",
   },
   {
-    title: "Is there a free trial available?",
-    desc: "Yes, we offer a 30 days free trial so you can experience our mobile application with no commitment.",
+    title: "Kann ich zu einem Schnupperkurs kommen bevor ich mich entscheide?",
+    desc: "Ja, wir bieten regelmäßig Schnupperkurse an, damit du dir ein Bild von unserem Angebot machen kannst. Melde dich einfach bei uns und wir vereinbaren einen Termin.",
   },
   {
-    title: "How can I upgrade my account?",
-    desc: "To upgrade your account, log in and navigate to the [Upgrade Account] section in your dashboard. Follow the prompts to select your preferred plan.",
+    title: "Wie kann ich Feedback an die Kursleitung geben?",
+    desc: "Wir freuen uns über jedes Feedback, das wir von unseren Teilnehmern erhalten. Du kannst uns jederzeit eine E-Mail schreiben oder uns während der Kurse persönlich ansprechen.",
   },
   {
-    title: "Can I cancel my subscription anytime?",
-    desc: "Absolutely, you can cancel your subscription at any time with no questions asked. Your subscription will remain active until the end of the current billing cycle.",
+    title: "Kann ich meine Kursbuchung stornieren?",
+    desc: "Ja, du kannst deine Kursbuchung bis zu 24 Stunden vor Kursbeginn stornieren. Bitte beachte, dass wir bei späteren Stornierungen eine Gebühr erheben.",
   },
   {
-    title: "How can I upgrade my account to paid?",
-    desc: "To upgrade your account, log in and navigate to the [Upgrade Account] section in your dashboard. Follow the prompts to select your preferred plan.",
-  },
-  {
-    title: "What if I need help or have technical issues?",
-    desc: "Our dedicated support team is here to assist you. Reach out via [mention preferred support channels, e.g., live chat, email, or phone], and we'll get back to you promptly.",
+    title: "Können Vater und Mutter gemeinsam mit Kind an einem Kurs teilnehmen?",
+    desc: "Ja, unsere Kurse richten sich an beide Elternteile. Wir freuen uns über jede Familie, die gemeinsam an unseren Kursen teilnimmt.",
   },
 ];
 
@@ -37,15 +33,13 @@ export function Faqs() {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
           <TypographyComponent variant="h1" color="blue-gray" className="mb-4">
-            Frequently asked questions
+            Häufig gestellte Fragen
           </TypographyComponent>
           <TypographyComponent
             variant="lead"
             className="mx-auto mb-24 !text-gray-500 lg:w-3/5"
           >
-            A lot of people don&apos;t appreciate the moment until it&apos;s
-            passed. I&apos;m not trying my hardest, and I&apos;m not trying to
-            do
+            Ist deine Frage nicht dabei? Dann lass uns in Kontakt treten.
           </TypographyComponent>
         </div>
 

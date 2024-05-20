@@ -3,9 +3,8 @@ import { Navbar, Footer } from "@/components";
 
 // sections
 import Hero from "./hero";
-import VideoIntro from "./video-intro";
-import Feature from "./feature";
-import MobileConvenience from "./mobile-convenience";
+import Feature from "./courses";
+import CourseLocation from "./course-location";
 import Testimonials from "./testimonials";
 import Faqs from "./faqs";
 
@@ -14,9 +13,8 @@ export default function Campaign() {
     <>
       <Navbar />
       <Hero />
-      <VideoIntro />
       <Feature />
-      <MobileConvenience />
+      <CourseLocation />
       <Testimonials />
       <Faqs />
       <Footer />

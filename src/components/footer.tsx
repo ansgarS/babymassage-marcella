@@ -5,7 +5,7 @@ import ButtonComponent, {
   IconButtonComponent,
 } from "@/components/shared/ButtonComponent";
 
-const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
+const LINKS = ["Über uns", "Kurse", "Kursort"];
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
               color="white"
               className="mb-4"
             >
-              Marcellas Babymassage
+              Zwergenstube Lahnstein
             </TypographyComponent>
             <TypographyComponent color="white" className="mb-12 font-normal">
               Sinnliche Momente mit deinem Baby und dir.
@@ -46,34 +46,34 @@ export function Footer() {
           </div>
           <div className="mt-8 w-full md:mt-0 md:w-auto">
             <TypographyComponent variant="h6" color="white" className="mb-3">
-              Get the app
+              Buche deine Erlebnis
             </TypographyComponent>
             <div className="flex flex-col gap-2">
               <ButtonComponent
                 color="white"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center gap-3"
               >
                 <Image
                   width={256}
                   height={256}
-                  src="/logos/logo-apple.png"
-                  className="-mt-0.5 mr-2 h-6 w-6"
-                  alt="ios"
+                  src="/logos/umschlag.png"
+                  alt="metamask"
+                  className="w-6 h-6"
                 />
-                App Store
+                Buchung
               </ButtonComponent>
               <ButtonComponent
                 color="white"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center gap-3"
               >
                 <Image
                   width={256}
                   height={256}
-                  src="/logos/logo-google.png"
-                  className="-mt-0.5 mr-2 h-6 w-6"
-                  alt="ios"
+                  src="/logos/anruf.png"
+                  alt="metamask"
+                  className="w-6 h-6"
                 />
-                Google Play
+                Kontakt
               </ButtonComponent>
             </div>
           </div>

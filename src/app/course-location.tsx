@@ -24,26 +24,26 @@ const OPTIONS = [
   },
 ];
 
-export function MobileConvenience() {
+export function CourseLocation() {
   return (
     <section className="py-20 px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
         <Image
           width={256}
           height={256}
-          src="/image/iphone.png"
-          className="col-span-1 w-1/2 mx-auto lg:w-10/12"
-          alt="iphone-photo"
+          src="/image/course-location.jpeg"
+          className="col-span-1 w-1/2 mx-auto lg:w-10/12 blur-sm"
+          alt="Kursort"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
           <TypographyComponent variant="h2" color="blue-gray" className="mb-4">
-            Mobile Convenience
+            Der Kursort
           </TypographyComponent>
           <TypographyComponent
             variant="lead"
             className="mb-5 px-4 text-left  text-xl !text-gray-500 lg:px-0  "
           >
-            Access your learning materials on the go.
+            Eine Wohlfühloase für Groß und Klein
           </TypographyComponent>
 
           <div className="col-span-2 grid gap-5 grid-cols-2 ">
@@ -58,4 +58,4 @@ export function MobileConvenience() {
     </section>
   );
 }
-export default MobileConvenience;
+export default CourseLocation;
