@@ -5,10 +5,20 @@ import ButtonComponent, {
   IconButtonComponent,
 } from "@/components/shared/ButtonComponent";
 
-const LINKS = ["Über uns", "Kurse", "Kursort"];
+const LINKS = [
+  { id: "#top-of-site", title: "Start" },
+  { id: "#ueber-uns", title: "Über uns" },
+  { id: "#course-offers", title: "Kurse" },
+  { id: "#course-location", title: "Kursort" },
+];
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
+  const scrollTo = (ref: string) => {
+    const section = document.querySelector(ref);
+    section?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <footer className="mt-10 bg-gray-900 px-8 pt-12">
       <div className="container mx-auto">
@@ -29,16 +39,14 @@ export function Footer() {
             </TypographyComponent>
             <ul className="flex flex-wrap items-center justify-center md:justify-start">
               {LINKS.map((link, idx) => (
-                <li key={link}>
+                <li onClick={() => scrollTo(link.id)} key={link.id}>
                   <TypographyComponent
-                    as="a"
-                    href="#"
                     color="white"
-                    className={`py-1 font-medium transition-colors ${
+                    className={`cursor-pointer py-1 font-medium transition-colors ${
                       idx === 0 ? "pr-3" : "px-3"
                     }`}
                   >
-                    {link}
+                    {link.title}
                   </TypographyComponent>
                 </li>
               ))}
@@ -91,17 +99,16 @@ export function Footer() {
           </TypographyComponent>
 
           <div className="flex gap-2">
-            <IconButtonComponent variant="text" color="white">
-              <i className="fa-brands fa-twitter text-2xl not-italic opacity-75"></i>
-            </IconButtonComponent>
-            <IconButtonComponent variant="text" color="white">
-              <i className="fa-brands fa-linkedin text-2xl not-italic opacity-75"></i>
-            </IconButtonComponent>
+            <TypographyComponent
+              as="a"
+              href="/imprint"
+              color="white"
+              className={`cursor-pointer py-1 font-medium transition-colors`}
+            >
+              Impressum
+            </TypographyComponent>
             <IconButtonComponent variant="text" color="white">
               <i className="fa-brands fa-facebook text-2xl not-italic opacity-75"></i>
-            </IconButtonComponent>
-            <IconButtonComponent variant="text" color="white">
-              <i className="fa-brands fa-github text-2xl not-italic opacity-75"></i>
             </IconButtonComponent>
             <IconButtonComponent variant="text" color="white">
               <i className="fa-brands fa-dribbble text-2xl not-italic opacity-75"></i>

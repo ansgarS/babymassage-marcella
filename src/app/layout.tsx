@@ -12,7 +12,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Zwergenstube Lahnstein",
   description:
-    "In der Zwergenstube finden Mütter und Kinder einen Ort zum Spielen, Basteln und Austauschen. Wir bieten ein vielfältiges Programm für Kinder und Eltern.",
+    "In der Zwergenstube finden Eltern und Kinder einen Ort zum Spielen, Basteln und Austauschen. Wir bieten ein vielfältiges Programm für Kinder und Eltern.",
 };
 
 export default function RootLayout({

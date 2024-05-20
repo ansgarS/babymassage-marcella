@@ -85,7 +85,7 @@ export function Navbar() {
           <NavItem onClick={() => scrollTo("#top-of-site")}>Start</NavItem>
           <NavItem onClick={() => scrollTo("#ueber-uns")}>Über uns</NavItem>
           <NavItem onClick={() => scrollTo("#course-offers")}>Kurse</NavItem>
-          <NavItem>Kursort</NavItem>
+          <NavItem onClick={() => scrollTo("#course-location")}>Kursort</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
           <IconButtonComponent
@@ -134,7 +134,7 @@ export function Navbar() {
             <NavItem onClick={() => scrollTo("#top-of-site")}>Start</NavItem>
             <NavItem onClick={() => scrollTo("#ueber-uns")}>Über uns</NavItem>
             <NavItem onClick={() => scrollTo("#course-offers")}>Kurse</NavItem>
-            <NavItem>Kursort</NavItem>
+            <NavItem onClick={() => scrollTo("#course-location")}>Kursort</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <IconButtonComponent variant="text" color="gray" size="sm">

@@ -36,7 +36,7 @@ export function CourseLocation() {
           alt="Kursort"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
-          <TypographyComponent variant="h2" color="blue-gray" className="mb-4">
+          <TypographyComponent id="course-location" variant="h2" color="blue-gray" className="mb-4">
             Der Kursort
           </TypographyComponent>
           <TypographyComponent
