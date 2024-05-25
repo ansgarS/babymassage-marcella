@@ -13,7 +13,10 @@ const LINKS = [
 ];
 const CURRENT_YEAR = new Date().getFullYear();
 
-export function Footer() {
+export function Footer(props: {
+  requestCourseBooking: VoidFunction;
+  requestPhoneContact: VoidFunction;
+}) {
   const scrollTo = (ref: string) => {
     const section = document.querySelector(ref);
     section?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -60,6 +63,7 @@ export function Footer() {
               <ButtonComponent
                 color="white"
                 className="flex items-center justify-center gap-3"
+                onClick={props.requestCourseBooking}
               >
                 <Image
                   width={256}
@@ -73,6 +77,7 @@ export function Footer() {
               <ButtonComponent
                 color="white"
                 className="flex items-center justify-center gap-3"
+                onClick={props.requestPhoneContact}
               >
                 <Image
                   width={256}
@@ -101,7 +106,7 @@ export function Footer() {
           <div className="flex gap-2">
             <TypographyComponent
               as="a"
-              href="/imprint"
+              href="/imprint.html"
               color="white"
               className={`cursor-pointer py-1 font-medium transition-colors`}
             >

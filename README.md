@@ -3,13 +3,13 @@
 ## Build Command
 
 ```
-S3_BUCKET="zwergenstube-lahnstein.de" ASSETS_PREFIX="https://zwergenstube-lahnstein.de" APP_URL="https://zwergenstube-lahnstein.de" BASEPATH="" APP_BRANCH=main ENV=main AWS_PROFILE=private AWS_ACCOUNT=032419643434 AWS_REGION=eu-central-1 DEPLOY_ENV=prod yarn build
+GOOGLE_CAPTCHA_KEY=xxx BACKEND_API=https://t769howlvj.execute-api.eu-central-1.amazonaws.com/prod/ S3_BUCKET="zwergenstube-lahnstein.de" ASSETS_PREFIX="https://zwergenstube-lahnstein.de" APP_URL="https://zwergenstube-lahnstein.de" BASEPATH="" APP_BRANCH=main ENV=main AWS_PROFILE=private AWS_ACCOUNT=032419643434 AWS_REGION=eu-central-1 DEPLOY_ENV=prod yarn build
 ```
 
 ## Deploy Command
 
 ```
-S3_BUCKET="zwergenstube-lahnstein.de" ASSETS_PREFIX="https://zwergenstube-lahnstein.de" APP_URL="https://zwergenstube-lahnstein.de" BASEPATH="" APP_BRANCH=main ENV=main AWS_PROFILE=private AWS_ACCOUNT=032419643434 AWS_REGION=eu-central-1 DEPLOY_ENV=prod yarn cdk deploy --all --require-approval never
+GOOGLE_CAPTCHA_KEY=xxx S3_BUCKET="zwergenstube-lahnstein.de" ASSETS_PREFIX="https://zwergenstube-lahnstein.de" APP_URL="https://zwergenstube-lahnstein.de" BASEPATH="" APP_BRANCH=main ENV=main AWS_PROFILE=private AWS_ACCOUNT=032419643434 AWS_REGION=eu-central-1 DEPLOY_ENV=prod yarn cdk deploy --all --require-approval never
 ```
 
 ## Sync Command

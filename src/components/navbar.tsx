@@ -23,7 +23,7 @@ function NavItem({ children, onClick }: NavItemProps) {
   );
 }
 
-export function Navbar() {
+export function Navbar(props: { requestPhoneContact: VoidFunction }) {
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
 
@@ -73,6 +73,7 @@ export function Navbar() {
           <Image
             width={25}
             height={40}
+            priority={true}
             src="/logos/logo-zwergenstube.png"
             alt="Zwergenstube Logo"
           />
@@ -85,7 +86,9 @@ export function Navbar() {
           <NavItem onClick={() => scrollTo("#top-of-site")}>Start</NavItem>
           <NavItem onClick={() => scrollTo("#ueber-uns")}>Über uns</NavItem>
           <NavItem onClick={() => scrollTo("#course-offers")}>Kurse</NavItem>
-          <NavItem onClick={() => scrollTo("#course-location")}>Kursort</NavItem>
+          <NavItem onClick={() => scrollTo("#course-location")}>
+            Kursort
+          </NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
           <IconButtonComponent
@@ -109,11 +112,14 @@ export function Navbar() {
           >
             <i className="fa-brands fa-instagram text-base" />
           </IconButtonComponent>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <ButtonComponent color={isScrolling ? "amber" : "white"} size="sm">
-              Kontakt
-            </ButtonComponent>
-          </a>
+
+          <ButtonComponent
+            onClick={props.requestPhoneContact}
+            color={isScrolling ? "amber" : "white"}
+            size="sm"
+          >
+            Kontakt
+          </ButtonComponent>
         </div>
         <IconButtonComponent
           variant="text"
@@ -134,7 +140,9 @@ export function Navbar() {
             <NavItem onClick={() => scrollTo("#top-of-site")}>Start</NavItem>
             <NavItem onClick={() => scrollTo("#ueber-uns")}>Über uns</NavItem>
             <NavItem onClick={() => scrollTo("#course-offers")}>Kurse</NavItem>
-            <NavItem onClick={() => scrollTo("#course-location")}>Kursort</NavItem>
+            <NavItem onClick={() => scrollTo("#course-location")}>
+              Kursort
+            </NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <IconButtonComponent variant="text" color="gray" size="sm">
@@ -146,11 +154,15 @@ export function Navbar() {
             <IconButtonComponent variant="text" color="gray" size="sm">
               <i className="fa-brands fa-instagram text-base" />
             </IconButtonComponent>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <ButtonComponent color="amber" size="sm" className="ml-auto">
-                Kontakt
-              </ButtonComponent>
-            </a>
+
+            <ButtonComponent
+              onClick={props.requestPhoneContact}
+              color="amber"
+              size="sm"
+              className="ml-auto"
+            >
+              Kontakt
+            </ButtonComponent>
           </div>
         </div>
       </Collapse>

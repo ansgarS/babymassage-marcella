@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 import { Roboto } from "next/font/google";
 import { FixedPlugin, Layout } from "@/components";
 
@@ -53,10 +54,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={roboto.className}>
-        <Layout>
-          {children}
-          <FixedPlugin />
-        </Layout>
+        <ReCaptchaProvider language="de">
+          <Layout>
+            {children}
+            <FixedPlugin />
+          </Layout>
+        </ReCaptchaProvider>
       </body>
     </html>
   );

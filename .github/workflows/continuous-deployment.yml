@@ -4,7 +4,7 @@ concurrency: continuous-deployment
 on:
     push:
         branches:
-            - main
+            - unknown
 env:
     ENV: main
     APP_BRANCH: main
