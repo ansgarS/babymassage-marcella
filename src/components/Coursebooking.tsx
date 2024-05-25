@@ -45,7 +45,7 @@ export function CourseBookingModal(props: {
         return;
       }
     } catch (e) {
-      console.log("Ran into error", e);
+      console.log({ msg: "Ran into error", e });
       setStep("Error");
     }
 

@@ -17,7 +17,6 @@ export default function Homepage() {
   const [showCourseBookingModal, setShowCourseBookingModal] = useState(false);
   const [showPhoneContact, setShowPhoneContact] = useState(false);
 
-  console.log("Show phone contact", showPhoneContact)
   return (
     <>
       <Navbar requestPhoneContact={() => setShowPhoneContact(true)} />

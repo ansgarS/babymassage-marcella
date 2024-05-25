@@ -143,7 +143,7 @@ export class AppStack extends Stack {
     if (!process.env.GOOGLE_CAPTCHA_KEY) {
       throw new Error("Google Captcha key wird benötigt");
     }
-
+    
     const authorizer = new RecaptchaAuthorizer(this, "reCaptchaAuthorizer", {
       allowedActions: ["form_submit"],
       reCaptchaSecretKey: SecretKey.fromPlainText(

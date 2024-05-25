@@ -1,5 +1,6 @@
-var aws = require('aws-sdk');
-var ses = new aws.SES({ region: 'eu-central-1' });
+const { SESClient, SendEmailCommand } = require("@aws-sdk/client-ses");
+
+const client = new SESClient({ region: "eu-central-1" });
 
 const sendEmail = (email, nameParent, nameChild, ageChild, courseName, comment) => {
   var params = {
@@ -36,8 +37,8 @@ const sendEmail = (email, nameParent, nameChild, ageChild, courseName, comment) 
     },
     Source: 'support@zwergenstube-lahnstein.de',
   };
-
-  return ses.sendEmail(params).promise();
+  const command = new SendEmailCommand(params);
+  return client.send(command);
 };
 
 exports.main = async (event) => {
