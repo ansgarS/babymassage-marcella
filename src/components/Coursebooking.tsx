@@ -6,7 +6,9 @@ export function CourseBookingModal(props: {
   showCourseBookingModal: boolean;
   closeModal: VoidFunction;
 }) {
-  const [step, setStep] = useState<"Initial" | "Loading" | "Error">("Initial");
+  const [step, setStep] = useState<"Initial" | "Loading" | "Error" | "Success">(
+    "Initial"
+  );
   const [email, setEmail] = useState("");
   const [nameParent, setNameParent] = useState("");
   const [nameChild, setNameChild] = useState("");
@@ -100,6 +102,26 @@ export function CourseBookingModal(props: {
               className="w-[180px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Erneut versuchen
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    if (step === "Success") {
+      return (
+        <div className="p-4 md:p-5">
+          <p>Geschafft! Du kannst die Anfrage nun schließen.</p>
+
+          <div className="w-full flex justify-center mt-8">
+            <button
+              onClick={() => {
+                setStep("Initial");
+                props.closeModal();
+              }}
+              className="w-[180px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Schließen
             </button>
           </div>
         </div>

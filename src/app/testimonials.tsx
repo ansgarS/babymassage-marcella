@@ -40,7 +40,7 @@ export function Testimonials() {
             <UserIcon className="h-6 w-6" />
           </div>
           <TypographyComponent variant="h2" color="blue-gray" className="mb-2">
-            Was unsere bisherigen Gruppen sagen
+            Was andere Teilnehmer sagen
           </TypographyComponent>
           <TypographyComponent
             variant="lead"

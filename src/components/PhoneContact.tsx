@@ -67,10 +67,11 @@ export function PhoneContact(props: {
 
     return (
       <div className="p-4 md:p-5">
-        <p>Du erreichst mich unter der folgenden Telefonnummer:</p>
+        <p>Du erreichst mich unter folgenden Kontakten:</p>
         <div className="p-4">
           <div className="flex justify-center items-center w-full h-20 bg-amber-200">
-            <p className="font-bold">+49 179 74906100</p>
+            <p className="px-2 font-bold border-r border-r-gray-400">+49 179 74906100</p>
+            <p className="px-2 font-bold">zwergenstube.lahnstein@gmail.com</p>
           </div>
         </div>
         <p>Bitte füge deinen Anfragen folgende Infos hinzu:</p>

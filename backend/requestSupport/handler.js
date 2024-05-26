@@ -7,6 +7,7 @@ const sendEmail = (email, nameParent, nameChild, ageChild, courseName, comment) 
     Destination: {
       ToAddresses: [
         'ansgar.sa@gmail.com',
+        "zwergenstube.lahnstein@gmail.com"
       ],
     },
     Message: {
@@ -16,10 +17,10 @@ const sendEmail = (email, nameParent, nameChild, ageChild, courseName, comment) 
             
             ich habe eine Kursanfrage an dich gestellt:
 
+            Kursname: ${courseName}
             Name des Erziehungsberechtigten: ${nameParent}
-            Name der Kindes:                 ${nameChild}
-            Alter des Kindes:                ${ageChild}
-            Kursname:                        ${courseName}
+            Name der Kindes: ${nameChild}
+            Alter des Kindes: ${ageChild}
             
             Anmerkungen:
             ${comment}
@@ -32,6 +33,9 @@ const sendEmail = (email, nameParent, nameChild, ageChild, courseName, comment) 
             ${nameParent}
         ` },
       },
+      ReplyToAddresses: [
+        email
+      ],
 
       Subject: { Data: `Kursanfrage von ${nameParent}` },
     },

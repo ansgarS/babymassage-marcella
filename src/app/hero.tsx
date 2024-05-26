@@ -86,12 +86,14 @@ function Hero(props: { requestCourseBooking: VoidFunction, requestPhoneContact: 
           </TypographyComponent>
           <TypographyComponent
             variant="paragraph"
-            className="font-normal !text-gray-500 lg:w-5/12"
+            className="font-normal !text-gray-500 lg:w-8/12"
           >
-            Die Zwergenstube Lahnstein ist ein Treffpunkt für Eltern mit
-            neugeborenen Kindern. Wir bieten verschiedene Kurse an, in denen du
-            und dein Kind gemeinsam lernen und spielen könnt. Finde mit uns
-            gemeinsam heraus, was dir und deinem Kind am besten gefällt.
+            Ich bin Marcella Tarricone, staatl. Anerkannte Erzieherin und selbst Mutter zweier Töchter. 
+            Während meiner Tätigkeit als Erzieherin absolvierte ich eine Ausbildung zur Heilpraktikerin 
+            für Psychotherapie und zur Kursleiterin für Babymassage. Ich arbeite leidenschaftlich gerne 
+            am Menschen, insbesondere mit Kindern und (werdenden) Mütter zusammen und habe genau aus diesem 
+            Grund 2024 den Schritt in die Selbstständigkeit gewagt. Mit meinem Kursangebot möchte ich frischgebackenen 
+            Eltern auf ihrem Weg begleiten und den Rahmen für schöne und intensive Momente schaffen.
           </TypographyComponent>
         </div>
       </div>

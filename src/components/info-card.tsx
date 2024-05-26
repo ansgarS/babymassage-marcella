@@ -13,7 +13,7 @@ export function InfoCard({ title, children }: InfoCardProps) {
   return (
     <CardComponent color="transparent" shadow={false}>
       <CardBodyComponent className="grid px-0">
-        <TypographyComponent variant="h2" color="blue-gray" className="mb-2">
+        <TypographyComponent variant="h2" color="blue-gray" className="md:mb-2 text-lg md:text-3xl">
           {title}
         </TypographyComponent>
         <TypographyComponent className=" font-normal">{children}</TypographyComponent>
